@@ -140,4 +140,4 @@ AWS VPC · EC2 · Auto Scaling · Application Load Balancer · Amazon RDS (MySQL
 
 ## Author
 
-**Sandakan Liyanage** – [LinkedIn](LINKEDIN_URL) · [Portfolio](PORTFOLIO_URL) · [GitHub](https://github.com/Sanda1113)
+**Sandakan Liyanage** – [LinkedIn](https://www.linkedin.com/in/sandakan-liyanage-2baa9a207/) · [Portfolio](PORTFOLIO_URL) · [GitHub](https://github.com/Sanda1113/Sanda1113)
