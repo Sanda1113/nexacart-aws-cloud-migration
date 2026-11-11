@@ -6,6 +6,8 @@ Migration design and Infrastructure-as-Code deployment for **NexaCart Solutions*
 
 ![NexaCart AWS architecture](docs/architecture/nexacart-architecture.png)
 
+📄 **Full report:** [NexaCart Cloud Migration – Assignment Report (PDF)](CB014568-COMCT24A1-ECIA_Individual_Assignment.pdf)
+
 ---
 
 ## Problem
@@ -108,21 +110,16 @@ AWS Academy restrictions meant these production features are **designed but not 
 
 ## Evidence
 
-### CloudFormation stack (24 resources)
-![CloudFormation resources 1](docs/screenshots/cloudformation-resources-1.jpeg)
-![CloudFormation resources 2](docs/screenshots/cloudformation-resources-2.jpeg)
-![CloudFormation resources 3](docs/screenshots/cloudformation-resources-3.jpeg)
-![CloudFormation resources 4](docs/screenshots/cloudformation-resources-4.jpeg)
-![CloudFormation resources 5](docs/screenshots/cloudformation-resources-5.jpeg)
+The full assignment report is the evidence for this project:
 
-### Launch template
-![Launch template](docs/screenshots/launch-template.jpeg)
+**[📄 Download / view the report (PDF)](CB014568-COMCT24A1-ECIA_Individual_Assignment.pdf)**
 
-### Auto Scaling group
-![Auto Scaling group](docs/screenshots/auto-scaling-group.jpeg)
+It includes:
 
-### Live website through the ALB
-![Live website](docs/screenshots/live-website.jpeg)
+- Current-state analysis of the on-premises environment and the 7 Rs migration plan
+- The target AWS architecture and its Well-Architected justification
+- Screenshots of the deployed CloudFormation stack (all 24 resources at `CREATE_COMPLETE`), the launch template, the Auto Scaling group, and the live website served through the ALB
+- The warm-standby disaster recovery design, recovery objectives and failover runbook
 
 ---
 
@@ -130,26 +127,11 @@ AWS Academy restrictions meant these production features are **designed but not 
 
 ```
 nexacart-aws-cloud-migration/
-├── cloudformation/
-│   └── nexacart-advanced-asg.yaml
 ├── docs/
-│   ├── architecture/
-│   │   └── nexacart-architecture.png
-│   └── screenshots/
-│       ├── cloudformation-resources-1.jpeg ... -5.jpeg
-│       ├── launch-template.jpeg
-│       ├── auto-scaling-group.jpeg
-│       └── live-website.jpeg
+│   └── architecture/
+│       └── nexacart-architecture.png
+├── CB014568-COMCT24A1-ECIA_Individual_Assignment.pdf
 └── README.md
-```
-
-## Deploy
-
-```bash
-aws cloudformation create-stack \
-  --stack-name NexaCart-Advanced-ASG \
-  --template-body file://cloudformation/nexacart-advanced-asg.yaml \
-  --capabilities CAPABILITY_NAMED_IAM
 ```
 
 ## Tech stack
